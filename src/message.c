@@ -1215,7 +1215,8 @@ static void handle_domain_config(FILE *rsp, struct token domain, char *message)
             if (value.type == TOKEN_TYPE_INVALID) {
                 fprintf(rsp, "%.4f\n", g_window_manager.border_radius);
             } else if (value.type == TOKEN_TYPE_INT) {
-                window_manager_set_window_border_radius(&g_window_manager, value.int_value);
+                // window_manager_set_window_border_radius(&g_window_manager, value.int_value);
+                daemon_fail(rsp, "changing border radius is deactived.\n");
             } else {
                 daemon_fail(rsp, "unknown value '%.*s' given to command '%.*s' for domain '%.*s'\n", value.token.length, value.token.text, command.length, command.text, domain.length, domain.text);
             }

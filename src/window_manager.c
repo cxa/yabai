@@ -271,7 +271,7 @@ void window_manager_set_window_border_width(struct window_manager *wm, int width
             if (bucket->value) {
                 struct window *window = bucket->value;
                 if (window->border.id) {
-                    CGContextSetLineWidth(window->border.context, width);
+                    CGContextSetLineWidth(window->border.context, 2.f*width);
                     border_redraw(window);
                 }
             }
@@ -2345,7 +2345,7 @@ void window_manager_init(struct window_manager *wm)
     wm->border_resolution = 2.0f;
     wm->border_blur = true;
     wm->border_width = 4;
-    wm->border_radius = 12;
+    wm->border_radius = 0;
 
     table_init(&wm->application, 150, hash_wm, compare_wm);
     table_init(&wm->window, 150, hash_wm, compare_wm);
