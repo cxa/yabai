@@ -1,3 +1,20 @@
+# yabai (another fork)
+
+![yabai fork](assets/screenshot_fork.png)
+
+## Install
+
+```sh
+brew tap cxa/formulae
+brew install --HEAD cxa/formulae/yabai
+```
+
+You may need to `rm -rf ~/Library/Caches/Homebrew/yabai--git` before reinstallation because this repo rebase frequently.
+
+---
+
+Below is original REDAME:
+
 <!-- Please be careful editing the below HTML, as GitHub is quite finicky with anything that looks like an HTML tag in GitHub Flavored Markdown. -->
 <p align="center">
   <img width="75%" src="assets/banner/banner.svg" alt="Banner">
