@@ -1,3 +1,6 @@
+> [!NOTE]
+> Yabai no long support borders since 6.0, use https://github.com/cxa/JankyBorders instead.
+
 # yabai (another fork)
 
 ![yabai fork](assets/screenshot_fork.png)
